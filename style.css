@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Ubuntu, sans-serif;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #5a778a;
+}
+
+#navbar {
+    align-items: center;
+    height: 70px;
+    background-color: #faf8f3;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar a {
+    color: #333;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    border-bottom: none; /* removed because the animated underline is drawn with a pseudo-element */
+}
+
+/* Centered underline effect (animated):
+   - A pseudo-element (::after) is absolutely positioned at the bottom of the link.
+   - It spans the link's full width but is initially hidden using `transform: scaleX(0)`.
+   - `transform-origin: center` makes the scale expand from the center outward.
+   - On hover we set `transform: scaleX(1)` so the line grows from center to both sides.
+   - Tweak `height` for thickness, `background` for color, and `transition` for speed.
+*/
+#navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 6px;            /* vertical position */
+    width: 100%;
+    height: 3px;            /* thickness */
+    background: #F26522;    /* color when visible */
+    transform: scaleX(0);   /* hidden at start */
+    transform-origin: center;
+    transition: transform 0.25s ease;
+    pointer-events: none;
+}
+
+#navbar a:hover::after {
+    transform: scaleX(1);   /* expand from center to full width */
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo {
+    padding: 5px 20px;
+}
