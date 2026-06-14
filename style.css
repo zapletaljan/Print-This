@@ -3,6 +3,7 @@ body {
     font-family: Ubuntu, sans-serif;
     background-color: #F4F1EA;
     padding-top: 70px;
+    padding-bottom: 60px;
 }
 
 html,
@@ -287,6 +288,8 @@ html {
     height: 60px;
     gap: 30px;
     align-items: center;
+    margin-top: auto;
+
 }
 
 .color {
@@ -492,4 +495,42 @@ html {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.parameter {
+    color: #F26522;
+    font-weight: 700;
+}
+
+#disclaimer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 40px 20px;
+}
+
+.disclaimer-page {
+    min-height: 100vh;
+    position: relative;
+}
+
+.disclaimer-page #footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#disclaimer-container h1 {
+    color: #000000;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#disclaimer-container p {
+    color: #333;
+    font-size: 24px;
+    line-height: 0.4;
 }

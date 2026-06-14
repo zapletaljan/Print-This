@@ -11,3 +11,7 @@ function hardwareScroll() { // Scroll to the hardware section
 function scrollToTop() { // Scroll to the top of the page
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+function goToIndexHTML() {
+  window.location.href = 'index.html';
+}
