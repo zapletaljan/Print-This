@@ -630,6 +630,7 @@ html {
     }
     .go-back-btn{
         width: 40%;
+    }
 }
 
 @media (min-width: 768px) {
