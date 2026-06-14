@@ -126,7 +126,7 @@ body {
 
 #hardware-container h1,
 #filament-container h1,
-#contact-container h1{
+#contact-container h1 {
     color: #000000;
     font-size: 36px;
     margin-bottom: 20px;
@@ -449,4 +449,47 @@ html {
 
 #filament-img {
     padding: 5px 20px;
+}
+
+#contacts {
+    border-radius: 10px;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    background-color: #dfdfdf;
+}
+
+#contact-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #dfdfdf;
+    padding: 10px;
+}
+
+#contact-2 {
+    background-color: #e8e8e8;
+    padding: 10px;
+}
+
+#contact-3 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #dfdfdf;
+    padding: 10px;
+}
+
+.contact {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-text-container {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
