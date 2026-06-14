@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print This!</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,14 +15,17 @@
 </head>
 
 <body>
+    <div id="top"></div>
     <div id="navbar">
         <div class="logo">
-            <img src="img/logo.svg" alt="Logo">
+            <img src="img/logo.svg" alt="Logo" onclick="scrollToTop()">
         </div>
         <div class="nav-links">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Services</a>
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#top" class="nav-link">Home</a>
+            <a href="#form-container" class="nav-link">Form</a>
+            <a href="#hardware-container" class="nav-link">Hardware</a>
+            <a href="#filament-container" class="nav-link">Filaments</a>
+            <a href="#contact-container" class="nav-link">Contact</a>
         </div>
     </div>
     <div class="container">
@@ -31,16 +35,136 @@
             <p>Doesn't matter if it's a prototype, a display piece, or a functional part, I can print it all!</p>
             <p>To order a print of your 3D model, simply fill out our very short <a href="#form-container">form</a>.</p>
             <div class="info-btns">
-                <button class="order-btn" id="interest-btn">I'm interested!</button>
-                <button class="order-btn" id="hardware-btn">Show me the hardware!</button>
+                <button class="order-btn" id="interest-btn" onclick="formScroll()">I'm interested!</button>
+                <button class="order-btn" id="hardware-btn" onclick="hardwareScroll()">Show me the hardware!</button>
             </div>
         </div>
         <div class="printer-img">
-            <img src="img/printer img.png" alt="3D Printer">
+            <img src="img/printer img.png" alt="3D Printer" onclick="hardwareScroll()">
         </div>
     </div>
     <div id="form-container"> <iframe id="jotform-embed" src="https://form.jotform.com/261635588582066"
             style="width: 40%; height: 600px; border: 0;" frameborder="0" scrolling="no"> </iframe>
+    </div>
+
+    <div id="hardware-container">
+
+        <h1>My Hardware</h1>
+
+        <div class="printer-info-container">
+            <div class="specs-container">
+                <h2 id="printer-name">Creality Ender-3 V3 SE</h2>
+
+                <div id="printer-specs">
+                    <div class="specification-1" id="top-spec">
+                        <p>Technology:</p>
+                        <p>FDM</p>
+                    </div>
+                    <div class="specification-2">
+                        <p>Build Volume:</p>
+                        <p>220 x 220 x 250 mm</p>
+                    </div>
+                    <div class="specification-1">
+                        <p>Max Print Speed:</p>
+                        <p>250 mm/s</p>
+                    </div>
+                    <div class="specification-2">
+                        <p>Max Nozzle Temp:</p>
+                        <p>260 °C</p>
+                    </div>
+                    <div class="specification-1">
+                        <p>Max Bed Temp:</p>
+                        <p>100 °C</p>
+                    </div>
+                    <div class="specification-2">
+                        <p>Layer Resolution:</p>
+                        <p>0.1 mm</p>
+                    </div>
+                    <div class="specification-1" id="bottom-spec">
+                        <p>Leveling:</p>
+                        <p>Automatic</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="printer-img">
+                <img src="img/printer img.png" alt="3D Printer">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="filament-container">
+
+        <h1>My Filaments</h1>
+
+        <div class="filament-info-container">
+            <div class="filaments-container">
+                <h2 id="filament-name">Filaments</h2>
+
+                <div id="filament-types">
+                    <div class="filament-1" id="top-filament">
+                        <p>PLA:</p>
+                        <div class="color-container">
+                            <div class="color" id="matte-white">
+                                <p class="hidden">Matte White</p>
+                            </div>
+                            <div class="color" id="cf-black">
+                                <p class="hidden">CF Black</p>
+                            </div>
+                            <div class="color" id="marble">
+                                <p class="hidden">Marble</p>
+                            </div>
+                            <div class="color" id="beige">
+                                <p class="hidden">Beige</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filament-2">
+                        <p>PLA+:</p>
+                        <div class="color-container">
+                            <div class="color" id="red">
+                                <p class="hidden">Red</p>
+                            </div>
+                            <div class="color" id="blue">
+                                <p class="hidden">Blue</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filament-1">
+                        <p>Silk PLA:</p>
+                        <div class="color-container">
+                            <div class="color" id="silver">
+                                <p class="hidden">Silver</p>
+                            </div>
+                            <div class="color" id="gold">
+                                <p class="hidden">Gold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filament-2" id="bottom-filament">
+                        <p>PETG:</p>
+                        <div class="color-container">
+                            <div class="color" id="black">
+                                <p class="hidden">Black</p>
+                            </div>
+                            <div class="color" id="silver">
+                                <p class="hidden">Silver</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <img src="img/filaments.png" id="filament-img" alt="Filaments">
+            </div>
+
+        </div>
+
     </div>
 
     <div id="footer">

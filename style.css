@@ -2,8 +2,11 @@ body {
     margin: 0;
     font-family: Ubuntu, sans-serif;
     background-color: #F4F1EA;
+    padding-top: 70px;
 }
-html, body {
+
+html,
+body {
     height: 100%;
 }
 
@@ -12,7 +15,7 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #F4F1EA;
+    background-image: linear-gradient(to bottom, #ff8952, #F4F1EA);
 }
 
 #navbar {
@@ -23,8 +26,10 @@ html, body {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     background: #faf8f3;
     box-shadow: 10px 2px 40px rgba(0, 0, 0, 0.192);
@@ -73,6 +78,7 @@ html, body {
 }
 
 .logo img {
+    cursor: pointer;
     height: 60px;
     width: auto;
     object-fit: contain;
@@ -100,11 +106,101 @@ html, body {
 .container {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to bottom right, #f76a28, #ff8952);
+    background-image: linear-gradient(to bottom, #f76a28, #ff8952);
     width: 100%;
     height: 600px;
     justify-content: space-between;
+    overflow: hidden;
 }
+
+#hardware-container,
+#filament-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 20px;
+    text-align: center;
+    align-items: center;
+}
+
+#hardware-container h1,
+#filament-container h1 {
+    color: #000000;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#printer-name,
+#filament-name {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.printer-info-container,
+.filament-info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 20px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.filament-info-container {
+    gap:325px;
+}
+
+#printer-specs,
+#filament-types {
+    background-color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    min-width: 500px;
+}
+
+#top-spec,
+#top-filament {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#bottom-spec,
+#bottom-filament {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.specification-1,
+.specification-2,
+.filament-1,
+.filament-2 {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+}
+
+.specification-1,
+.filament-1 {
+    background-color: #dfdfdf;
+}
+
+.specification-2,
+.filament-2 {
+    background-color: #e8e8e8;
+}
+
 
 .printer-img {
     align-self: center;
@@ -112,6 +208,7 @@ html, body {
     display: flex;
     padding: 20px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .printer-img:hover {
@@ -161,7 +258,7 @@ html, body {
 }
 
 .info a {
-    color: #000000;
+    color: #333;
 }
 
 html {
@@ -188,4 +285,164 @@ html {
     height: 60px;
     gap: 30px;
     align-items: center;
+}
+
+.color {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #333;
+    transition: 0.3s ease-in-out;
+}
+
+.color:hover {
+    width: 125px;
+    border-radius: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+#matte-white {
+    background-color: #ececec;
+}
+
+#matte-white:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 7px;
+}
+
+.color-container p {
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    overflow: hidden; /* Hides the text while the div is too small */
+}
+
+#cf-black {
+    background-color: #212121;
+}
+
+#cf-black:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 7px;
+}
+
+#marble {
+    background-color: #b0b0b0;
+}
+
+#marble:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 7px;
+}
+
+#beige {
+    background-color: #d2b48c;
+}
+
+#beige:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 7px;
+}
+
+#red {
+    background-color: #ff0000;
+}
+
+#red:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 7px;
+}
+
+
+#blue {
+    background-color: #0000ff;
+}
+
+#blue:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 7px;
+}
+
+#silver {
+    background-color: #c0c0c0;
+}
+
+#silver:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 7px;
+}
+
+#gold {
+    background-color: #ffd700;
+}
+
+#gold:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 7px;
+}
+
+#black {
+    background-color: #000000;
+}
+
+#black:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 7px;
+}
+
+.color-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#filament-img {
+    max-height: 700px;
+    width: auto;
+    object-fit: contain;
+}
+
+#filament-img {
+    padding: 5px 20px;
 }
