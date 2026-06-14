@@ -120,7 +120,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 20px;
     text-align: center;
     align-items: center;
 }
@@ -533,4 +532,108 @@ html {
     color: #333;
     font-size: 24px;
     line-height: 0.4;
+}
+
+#mobile-nav {
+    font-family: Ubuntu, sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 60%;
+    width: 40%;
+    border: solid 2px #F26522;
+    border-radius: 50px;
+    align-items: center;
+    padding-left: 10px;
+    transition: 0.3s ease-in-out;
+    -moz-appearance: none;
+}
+
+#mobile-nav:hover {
+    background-color: #F26522;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+#mobile-nav option {
+    height: 30px;
+}
+
+.go-back-btn{
+    font-family: Ubuntu, sans-serif;
+    cursor: pointer;
+    margin-top: 50px;
+    background-color: #F26522;
+    width: 10%;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 25px;
+    color: #fff;
+    border: 2px solid #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.go-back-btn:hover {
+    margin-top: 45px;
+    background-color: #fff;
+    color: #f76a28;
+    border: 2px solid #F26522;
+    transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    #disclaimer-container p{
+        line-height: 1.1;
+    }
+    
+    body {
+        display: block;
+    }
+
+    .printer-img {
+        display: none;
+    }
+
+    #form-container {
+        width: 100%;
+    }
+
+    #jotform-embed {
+        width: 100% !important;
+    }
+
+    .printer-info-container,
+    .filament-info-container,
+    #contacts {
+        display: block;
+
+    }
+
+    .specification-1,
+    .specification-2,
+    .filament-1,
+    .filament-2,
+    .contact {
+        justify-content: center;
+        width: 100%;
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+    }
+
+    #printer-name,
+    #filament-name {
+        justify-self: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    .go-back-btn{
+        width: 40%;
+}
+
+@media (min-width: 768px) {
+    #mobile-nav{
+        display: none;
+    }
 }
