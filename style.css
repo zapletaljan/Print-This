@@ -3,6 +3,9 @@ body {
     font-family: Ubuntu, sans-serif;
     background-color: #F4F1EA;
 }
+html, body {
+    height: 100%;
+}
 
 #form-container {
     display: flex;
@@ -122,6 +125,7 @@ body {
 }
 
 .order-btn {
+    font-family: Ubuntu, sans-serif;
     cursor: pointer;
     margin-top: 50px;
     background-color: transparent;
