@@ -9,6 +9,14 @@ body {
 html,
 body {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 #form-container {
@@ -164,7 +172,9 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    min-width: 500px;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 #top-spec,
@@ -455,7 +465,9 @@ html {
 
 #contacts {
     border-radius: 10px;
-    min-width: 600px;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
@@ -587,7 +599,7 @@ html {
     body {
         display: block;
         width: 100%;
-        overflow-x: none;
+        overflow-x: hidden;
     }
 
     #disclaimer-container p {
